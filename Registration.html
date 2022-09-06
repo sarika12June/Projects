@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        input,label,select{
+        margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Course Registration</h1>
+    <form onsubmit="display();return false">
+    <label>firstName</label> <input id="firstName" type="text" placeholder="firstName"><br>
+    <label>lastName</label> <input id="lastName" type="text" placeholder="lastName"><br>
+        <label>Gender</label>
+        <input type="radio"  name ="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <br><label>Select Language</label>
+        <select id="language">
+            <option value="javascript">javascript</option>
+            <option value="java">java</option>
+            <option value="node">node</option>
+        </select>
+        <br><label>platform</label>
+        <input type="checkbox" id="online"  value="online">online
+        <input type="checkbox" id="offline" value="offline">offline
+        <br><input type="submit" value="register">
+    </form>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    function display(){
+         var firstName = document.getElementById("firstName").value;
+         var lastName = document.getElementById("lastName").value;
+         var language= document.getElementById("language").value;
+         var genders=document.getElementsByName("gender");
+         var genderNow;
+         for (const item of genders) {
+             if(item.checked){
+               genderNow= item.value;
+             }
+         }
+         var arr=[];
+          var online = document.getElementById("online");
+        var offline = document.getElementById("offline");
+         if (online.checked) {
+             arr.push(online.value);
+         }
+         if (offline.checked) {
+            arr.push(offline.value);
+        }
+       document.getElementById("result").innerHTML= `Welcome ur details are   ${firstName}, ${lastName},${genderNow}, ${language} , ${arr}!`;
+
+    }
+</script>

@@ -38,13 +38,13 @@ Components
 -------------------------------------------------------
   Every section is web page  is components , it can be reusable and merged has SPA
 there are two types of 
-1) class components(statefull)
+1) class components(statefull): we can impl states and life cycle of component in function components
    import react and component from react lib
    extends class with react.component
    use render method return html content
 
    
- 2) functional components(stateless)
+ 2) functional components(stateless) => we cannot impl states and life cycle of component in function components
     use function Declaration and return html content 
 	
 -------------------------------------------------------
@@ -52,8 +52,15 @@ nested compoent we can add  chid component to parent component
 state is used to intialize variable and setState is used for change variable value in class component
 props:communication between parent to child
 Render Prop : ?
-
-
 -------------------------------------------------------
-Project 01
-Create ecommerence web site with nav ,footer, product, itemcart and address
+lifecycle :componentDidMount(), componentWillMount => it can be used only in class component
+
+function component:to achieve stateful behaviour we can use react hooks  to impl state and life cycle methods
+
+from 16.8 =>react hooks :
+ useState() => it is like this.setState() in class component ;
+ useEffect() =>it is like componentDidMount in class component
+ 
+ import React, { Component,useState,useEffect } from "react";
+-------------------------------------------------------
+

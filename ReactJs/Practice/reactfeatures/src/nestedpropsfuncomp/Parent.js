@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Child from "./Child";
 function Parent() {
+  const [name, setStateName] = useState("srikanth");
+
   function setName() {
-    alert("setname ");
+    alert(name);
   }
-  function onTextChange() {
-    alert("on Text change ");
+  function onTextChange(event) {
+    setStateName(event.target.value);
   }
   return (
     <div>
       <h1>parent component</h1>
-      <Child lang="hindi"></Child>
-      <input type="text" onChange={onTextChange}></input>
+      <Child lang={name}></Child>
+      <input type="text" value={name} onChange={onTextChange}></input>
       <button style={{ color: "red" }} onClick={setName}>
-        function name change
+        set name
       </button>
     </div>
   );

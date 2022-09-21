@@ -3,6 +3,8 @@ import "./App.css"; //local css
 import CC from "./CC";
 import Parent from "./nestedpropsfuncomp/Parent";
 import ParentStatePropsExample from "./stateprops/ParentStatePropsExample";
+import LifeCycle from "./lifecycle/LifeCycle";
+import Hooks from "./ReactHooks/Hooks";
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,8 @@ function App() {
       <hr></hr>
       <CC></CC>
       <ParentStatePropsExample></ParentStatePropsExample>
+      <LifeCycle></LifeCycle>
+      <Hooks></Hooks>
     </div>
   );
 }

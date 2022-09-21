@@ -1,21 +1,21 @@
 React JS
----------------------------------
+-------------------------------------------------------
 Introduction
----------------------------------
+-------------------------------------------------------
 it is open source js library,developed by facebook in may 2013
 it is very good for creating SPA appliation, that displays data as it changes, without reloading the page.
----------------------------------
+-------------------------------------------------------
 How react works 
----------------------------------
+-------------------------------------------------------
 1)In react js , every section of web page is component
 2)place all the child components in app.js 
 3)To tell app.js as default component to react js add root value to the index.js
 4)In index.html file we have id property with value root 
 5)JSX =>javascript xml ,allows to write html code in javscript file
----------------------------------
+-------------------------------------------------------
 in javascript : <h1 id ="root"></h1> =>   document.getElementById('root').innerHTML='Hello World'
 in JSX        :const element=<h1>{name}</h1>;ReactDOM.render(element,document.getElementById('root'));
----------------------------------
+-------------------------------------------------------
 
 Each section of web page is component and can be resuable, can be merged as single component
 -------------------------------------------------------
@@ -23,7 +23,7 @@ Each section of web page is component and can be resuable, can be merged as sing
 npx create-react-app my-app
 -------------------------------------------------------
 sample code
-
+-------------------------------------------------------
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -32,7 +32,28 @@ root.render(
 );
 
 
+3 folder and 4 files in react app
+-------------------------------------------------------
+Components 
+-------------------------------------------------------
+  Every section is web page  is components , it can be reusable and merged has SPA
+there are two types of 
+1) class components(statefull)
+   import react and component from react lib
+   extends class with react.component
+   use render method return html content
 
-------------------------------------------------------
+   
+ 2) functional components(stateless)
+    use function Declaration and return html content 
+	
+-------------------------------------------------------
+nested compoent we can add  chid component to parent component 
+state is used to intialize variable and setState is used for change variable value in class component
+props:communication between parent to child
+Render Prop : ?
+
+
+-------------------------------------------------------
 Project 01
 Create ecommerence web site with nav ,footer, product, itemcart and address

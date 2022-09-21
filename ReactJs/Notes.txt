@@ -1,0 +1,38 @@
+React JS
+---------------------------------
+Introduction
+---------------------------------
+it is open source js library,developed by facebook in may 2013
+it is very good for creating SPA appliation, that displays data as it changes, without reloading the page.
+---------------------------------
+How react works 
+---------------------------------
+1)In react js , every section of web page is component
+2)place all the child components in app.js 
+3)To tell app.js as default component to react js add root value to the index.js
+4)In index.html file we have id property with value root 
+5)JSX =>javascript xml ,allows to write html code in javscript file
+---------------------------------
+in javascript : <h1 id ="root"></h1> =>   document.getElementById('root').innerHTML='Hello World'
+in JSX        :const element=<h1>{name}</h1>;ReactDOM.render(element,document.getElementById('root'));
+---------------------------------
+
+Each section of web page is component and can be resuable, can be merged as single component
+-------------------------------------------------------
+
+npx create-react-app my-app
+-------------------------------------------------------
+sample code
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+
+------------------------------------------------------
+Project 01
+Create ecommerence web site with nav ,footer, product, itemcart and address

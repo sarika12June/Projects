@@ -64,3 +64,15 @@ from 16.8 =>react hooks :
  import React, { Component,useState,useEffect } from "react";
 -------------------------------------------------------
 use maps to return the html content, or object 
+
+-------------------------------------------------------
+React Router => it keeps your UI in sync with the url
+install react-router-dom
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
+ <Routes><Route path="/home" element={<Home />} exact /></Routes>
+in navbar.js add import { Link } from "react-router-dom";
+<Link to ="home"><li>home</li><Link>
+-------------------------------------------------------
+Conditional statement =>{(()=>{if(true){return <h1>true</h1>
+}})()}
+-------------------------------------------------------

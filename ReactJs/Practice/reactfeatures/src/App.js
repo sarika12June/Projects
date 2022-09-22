@@ -5,6 +5,7 @@ import Parent from "./nestedpropsfuncomp/Parent";
 import ParentStatePropsExample from "./stateprops/ParentStatePropsExample";
 import LifeCycle from "./lifecycle/LifeCycle";
 import Hooks from "./ReactHooks/Hooks";
+
 function App() {
   return (
     <div className="App">

@@ -58,7 +58,6 @@ function BodyFile() {
             <br />
             <input type="submit" value="signup"></input> <br />
           </form>
-          <h1>{localStorage.getItem("faceBookArr")}</h1>
         </div>
       </div>
     </div>

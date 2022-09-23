@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Service from "./pages/Service";
 import LocalStroageSrikant from "./pages/LocalStroageSrikant";
+import HttpExample from "./pages/HttpExample";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             element={<LocalStroageSrikant />}
             exact
           />
+          <Route path="/HttpExample" element={<HttpExample />} exact />
         </Routes>
       </BrowserRouter>
     </div>

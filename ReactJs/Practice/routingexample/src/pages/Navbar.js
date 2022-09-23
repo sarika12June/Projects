@@ -17,6 +17,9 @@ function Navbar() {
         <Link to="/LocalStroageSrikant">
           <li>LocalStroageSrikant</li>
         </Link>
+        <Link to="/HttpExample">
+          <li>HttpExample</li>
+        </Link>
       </ul>
     </div>
   );

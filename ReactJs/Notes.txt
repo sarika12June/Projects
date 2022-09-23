@@ -76,3 +76,32 @@ in navbar.js add import { Link } from "react-router-dom";
 Conditional statement =>{(()=>{if(true){return <h1>true</h1>
 }})()}
 -------------------------------------------------------
+use naviagate from react-router-dom  and redirect it 
+
+-------------------------------------------------------
+Context API
+create user context file and define all the values
+use user content in app.js and append all child components to it
+later we can access the user context  details from child components
+
+implemation of context api can be done 6 steps
+
+1)Create Context file under src folder
+2)In it create contextProvider and class component , export both
+3)import class component(context) under app.js
+4)place all child components in context tag in app.js
+5)import contextProvider in child components
+6)create contextProvider obj and access the data from context
+in all the child classes 
+import { moviesProvider } from "../MoviesContext";
+and create   const contextObj = useContext(moviesProvider); 
+
+
+-------------------------------------------------------
+Axios :install axios
+call any http method using axios
+then retrive that data into map 
+append to  state
+use state as a expression into html 
+-------------------------------------------------------
+

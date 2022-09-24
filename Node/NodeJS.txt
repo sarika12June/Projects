@@ -1,0 +1,70 @@
+-------------------------------------------------------
+NodeJS Notes
+-------------------------------------------------------
+Node js acts as a server side scripting and runs like  runtime env
+example : server side scripting =Express js
+-------------------------------------------------------
+Modules :predefined javascript library which contains modules with repective methods
+
+types of Modules:
+
+core modules(predefined javascript library):http(used to create server from http module)=> require
+local modules:our logic  acts modules , can be used across node application =>use module.exports=dbinfo
+third part module:example bootstarp
+-------------------------------------------------------
+npm :node package manager for only run env javascript 
+
+example :gradle , maven 
+
+npm install bootstarp
+------------------------------------------------------- 
+Express :It is web application framework , it is open source and free modules 
+add require('express');const app=express();
+to receive data from client , install body-parser
+
+var bodyParser = require('body-parser')
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded{extended:true});
+------------------------------------------------------- 
+MongoDB is no sql database
+it is use json  format to save  in db
+collection =>table
+document =>row
+key> column 
+-------------------------------------------------------
+to create database => use databaseName
+to switch database => use databaseName
+to see all database => show databases =>show collections
+to create collection => db.createCollection('collectionName')
+add document to collection => db.collectionName.insert({key:'value'})
+to see all document from collection => db.collectionName.find()
+
+to update the document =>
+db.sectionA.update({name:'sarika'},{$set:{age:27}})
+
+to delete the document =>
+db.sectionA.remove({name:'abcd'})
+
+
+------------------------------------------------------- 
+call mongo db from express js
+
+ const db = require("mongoose");
+ db.connect('url',{},(err)=>{})
+ const Games=createModel({name:'string'})=> this creates the collection as games with object mentioned as doc
+ to  save to mongo db => use const collectionDoc=req.bodyParser.name =>collectionDoc.save(model);
+ to retierve find('Games',(err,document)=>{});
+ to remove document =>GameModel.findOneAndDelete({ name: req.body.name },(err)=>{});
+ to update document  =>GameModel.findOneAndUpdate({ name: req.body.name },{player:'srikanthm'},(err)=>{});
+------------------------------------------------------- 
+integrate react, express and mongo
+
+in react client application  in package json:::  "proxy": "http://localhost:5000/"
+use different routing name in react routing and node  express api (use predix with  api/getNames)
+
+------------------------------------------------------- 
+
+
+
+
+

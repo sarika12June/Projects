@@ -1,0 +1,134 @@
+React JS
+-------------------------------------------------------
+What is the difference between Virtual DOM and Real DOM?
+	Virtual DOM :
+				it is clone of original DOM
+				JSX element is updated if the element exists
+				It updates fast.
+			    render function in React,updates the node based on the changes that occur in the data model.
+				
+				
+	Real DOM    :
+				It is tree nodes of ur application
+				Creates a new DOM every time an element gets updated
+				It updates Slow.
+
+What is React?
+   it is javascript library , primarily used for frontend development.React uses the component-based approach, which makes react highly reusable.
+   render() function returns dom in the components
+   
+Features of React ?
+		single-direction data flow model.
+		Virtual DOM
+
+Whats JSX ?
+	it is combination of javascript and html.
+	later it converts JavaScript object using JSX transformers to the browser
+	
+
+what is state and props ?
+state is managed within the component (similar to variables declared within a function).
+props get passed to the component (similar to function parameters)
+
+What is the use of an arrow function in React?
+Used to write an expression and  bind components manually.
+<MyInput onChange={ (e) => this.handleOnChange(e) } />
+
+
+what is HOC?
+It is a function that takes a component as arugument  and returns a new component.example maps
+	Manipulation of props
+	State manipulation and abstraction
+	Render highjacking
+	Code reusing
+	Bootstrap abstraction
+
+what is redux?
+it is used for state management  , using reducers , action and store
+
+what are redux componet ?
+
+Action: An object that describes the call
+Reducer: The state change storage unit
+Store: the state and object tree storage
+View: Displays data provided by the store
+
+Can AJAX be used with React?
+  Axios and jQuery AJAX
+  
+
+what are three phases of a component life cycle in React?
+Initial rendering(beginning journey of the component),Update(it get updated agian to the DOM),Unmounting( destruction of the component remove the DOM)
+
+what is pure component ?
+ If the previous value of state or props and the new value of state or props is the same, the component will not re-render itself. Since Pure Components restricts the re-rendering when there is no use of re-rendering of the component.
+
+What are keys in React?
+{todos.map(({ task, id} ) => <li key={id}>{task}</li>}
+
+what is Controlled and Uncontrolled component?
+
+*two ways to create forms => controlled component and uncontrolled component
+*Controlled component (each feild has local state )  =>handled by state with in the component,data flow in unidirectional
+*Uncontrolled component (use ref hook)  =>uses use ref hook and make changes retrive the value from dom.
+
+
+How can you tell React to build in the production mode
+
+ 'process.env': { NODE_ENV: JSON.stringify('production') }
+ 
+Difference between cloneElement and createElement in React?
+In React, cloneElement is primarily used to clone an element and pass it to new props directly. Whereas, createElement is the entity that JSX gets compiled into. This is also used to create elements in React.
+
+
+how to bind the  state in react ?
+in function based :useState with name , setName
+in class based apporach :define name in this.state
+
+
+what is <StrictMode /> in react ?
+used to verify the deprecated methods and give warning ,identify potential risks.
+
+What would you do if your React application is rendering slowly?
+memo(): This is used to prevent all of the unnecessary re-rendering carried out by the function components.
+PureComponent: This is used to ensure that the unnecessary re-rendering of class components is avoided.
+
+conditional expression in react ?
+using  expression with IIFE  and  arrow function 
+example :
+{(()=>{if(true){return <h1>true</h1>
+}})()}
+
+Why is props passed to the super() function in React?
+super constructor except this as argument in the constructor
+
+
+what is getInitialState ?
+it used to define the initial state of a React component.
+
+what are predefined prop types present in React?
+bool
+func
+node
+number
+string
+
+what are hooks ?
+The functions that allow us to hook React state and lifecycle methods approach into the function components
+
+
+
+what is  React Fiber?
+it is is a new engine in React. It is the reimplementation core algorithm in React 16.
+
+
+
+
+
+
+
+
+
+
+   
+   

@@ -68,9 +68,9 @@ root.render(
 -------------------------------------------------------
 Components 
 -------------------------------------------------------
-  Every section is web page  is components , it can be reusable and merged has SPA
+Every section is web page  is components , it can be reusable and merged has SPA
 there are two types of 
-1) class components(statefull): we can impl states and life cycle of component in function components
+1) class components(statefull): we can impl states and life cycle of component 
    import react and component from react lib
    extends class with react.component
    use render method return html content
@@ -91,7 +91,7 @@ functional components :it supports from 16.8, we use useState ,props as paramter
 -------------------------------------------------------
 props types
 -------------------------------------------------------
-props types :shapes(data type) of props that component are excepting,react take care od prop type
+props types :shapes(data type) of props that component are excepting,react take care of prop type
 
 
 -------------------------------------------------------

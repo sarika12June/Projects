@@ -4,6 +4,38 @@ Introduction
 -------------------------------------------------------
 it is open source js library,developed by facebook in may 2013
 it is very good for creating SPA appliation, that displays data as it changes, without reloading the page.
+Performance :it updates only the nodes that needs updating
+Declartive:it use Declartive apporach ,which is easy to undestand
+Component based :it describes our interface as the self contained component that can be shared and used in other application
+Databinding:it allows us to combine data with markup and it take care of keeping the UI in sync with changes made in data =>one data binding
+html =>event =>js code
+Javascript data =>watcher =>html
+React doesn't have a mechanism to allow the HTML to change the component. The HTML can only raise events that the component responds to.
+<input /> does not have direct access to the components state
+-------------------------------------------------------
+DOM
+-------------------------------------------------------
+Document object model=> it is tree like structure of ur html documents
+without using react js => Decompostion (combine all components),state management(data from components) ,performance(updates changed node) and debugging(tool)
+
+
+ES6 :Arrow,variable decalration,classes ,destructing
+React advantages:scalable,compostion ui,portable and performant
+React Disadvantages:learning curve,documentation,jsx,state management
+-------------------------------------------------------
+Topices :
+
+Virtual DOM :process of updating Virtual DOM  to real dom is called reconcillation
+JSX :embeded html and javascript
+props:pass data from parent to child
+state:it used with class or function level scope , we can pass the state from parent to child, it cannot be changed at child level
+lifecyclemethods:
+components:independent pieces of UI elements ,reuabled , isloated
+class compoent
+function compoent
+class vs function component
+props types
+
 -------------------------------------------------------
 How react works 
 -------------------------------------------------------
@@ -46,32 +78,76 @@ there are two types of
    
  2) functional components(stateless) => we cannot impl states and life cycle of component in function components
     use function Declaration and return html content 
+	to achieve stateful behaviour we can use react hooks  to impl state and life cycle methods
+	note:takes props as parameter and have the state to keep track of the data
+-------------------------------------------------------	
 	
+difference between class components and functional components
+-------------------------------------------------------
+class components :it supports from initail version,we use setState,props as paramter ,life cycle method(will amount),do not use untill it is required
+
+
+functional components :it supports from 16.8, we use useState ,props as paramter,life cycle method(useEffect),use it as first perferences
+-------------------------------------------------------
+props types
+-------------------------------------------------------
+props types :shapes(data type) of props that component are excepting,react take care od prop type
+
+
 -------------------------------------------------------
 nested compoent we can add  chid component to parent component 
 state is used to intialize variable and setState is used for change variable value in class component
 props:communication between parent to child
 Render Prop : ?
 -------------------------------------------------------
-lifecycle :componentDidMount(), componentWillMount => it can be used only in class component
+lifecycle :getDerivedStateFromProps(),shouldComponentUpdate(),getSnapshotBeforeUpdate(),
+		  componentDidUpdate(),componentDidMount(),componentWillUnmount => it can be used only in class component
 
 function component:to achieve stateful behaviour we can use react hooks  to impl state and life cycle methods
-
+-------------------------------------------------------
 from 16.8 =>react hooks :
+-------------------------------------------------------
  useState() => it is like this.setState() in class component ;
  useEffect() =>it is like componentDidMount in class component
- 
+ useContext:share communication data betweeen components
+ useRef :even after component reset in render method data remains 
+ useReducer:it is advance version of state, it allows to define initial state of the application and manipulate state based on the action
  import React, { Component,useState,useEffect } from "react";
+-------------------------------------------------------
+Custom hooks:
+ 
+ it allows perform task and integrate them with react
+ we can create custom hook using existing hooks like use state and use effect
+ 
+-------------------------------------------------------
+ 
+Rule to use React hooks
+ Top level calls:do not call hooks from inside conditional , loop 
+ call from react function :call hooks from react function component or custom hooks managed by react
+ 
+-------------------------------------------------------
+Forms
+-------------------------------------------------------
+*Essential part of html like username and password  which react collects from user
+*it have internal state and keep them in sync in UI
+* form validation and Async way of submission
+* two ways to create forms => controlled component and uncontrolled component
+*Controlled component (each feild has local state )  =>handled by state with in the component,data flow in unidirectional
+*Uncontrolled component (use ref hook)  =>uses use ref hook and make changes retrive the value from dom.
+
 -------------------------------------------------------
 use maps to return the html content, or object 
 
 -------------------------------------------------------
+
 React Router => it keeps your UI in sync with the url
+three main =>Router(<BrowserRouter>,<HashRouter/>),Router  matchers(<route><switch>),Navigation(<link/><Render/>)
 install react-router-dom
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
  <Routes><Route path="/home" element={<Home />} exact /></Routes>
 in navbar.js add import { Link } from "react-router-dom";
 <Link to ="home"><li>home</li><Link>
+useParam,useRoutePath
 -------------------------------------------------------
 Conditional statement =>{(()=>{if(true){return <h1>true</h1>
 }})()}
@@ -79,6 +155,13 @@ Conditional statement =>{(()=>{if(true){return <h1>true</h1>
 use naviagate from react-router-dom  and redirect it 
 
 -------------------------------------------------------
+
+Statemanagemnt :
+
+Local State
+Global State
+Lifting upstate
+
 Context API
 create user context file and define all the values
 use user content in app.js and append all child components to it
@@ -97,6 +180,15 @@ import { moviesProvider } from "../MoviesContext";
 and create   const contextObj = useContext(moviesProvider); 
 
 
+
+Redux :Single source of truth (Store),state is read only ,changes are made by pure functions
+Action , Action creator,Reducer, store, dispatch,selectors
+mapsstatetoprops and mapsdispatchstoprops
+
+
+-------------------------------------------------------
+Testing : unit testing ,intergertion testing , acceptance testing
+mocking , snapshot testing, testing redux,component testing 
 -------------------------------------------------------
 Axios :install axios
 call any http method using axios

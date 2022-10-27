@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+    class Greeting extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={name:'srikanth'}
+            this.state = { favoritecolor: "red" };
+            this.state = { mystate: "TG" };
+        }
+        componentDidMount(){
+            alert("did mount");
+
+        }
+       static getDerivedStateFromProps(props, state) {
+            return { name: props.myname };
+        }
+        shouldComponentUpdate() {
+            return true;
+        }
+         changeColor = () => {
+            this.setState({ favoritecolor: "blue" });
+        }
+         getSnapshotBeforeUpdate(prevProps, prevState) {
+            document.getElementById("div1").innerHTML =
+                "Before the update, the favorite was " + prevState.favoritecolor;
+        }
+        componentDidUpdate() {
+            document.getElementById("div2").innerHTML =
+                "The updated favorite is " + this.state.favoritecolor;
+        }
+       
+        render(){
+           
+           return (
+                <div>
+                    <h1>hello from class {this.state.name}</h1>
+                    <h1>hello from class props {this.props.wish}</h1>
+                    <h1>hello from class props {this.state.mystate}</h1>
+                    <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+                    <button type="button" onClick={this.changeColor}>Change color</button>
+                    <div id="div1"></div>
+                   <div id="div2"></div>
+                </div>
+            );
+            
+        }
+    }
+
+    ReactDOM.render(<Greeting myname="srikanth" wish='mywish' />, document.getElementById('main'));
+</script>
+</body>
+
+</html>
